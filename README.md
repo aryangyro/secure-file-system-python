@@ -406,3 +406,10 @@ SHA-256's speed is the point.
 - `demo_fs/` is a folder on disk, not a real file system. It
   simulates one; it does not handle many users at once or
   concurrent writes.
+
+
+## Try it yourself
+
+- Log in as nurse1 and try to write to a file owned by doctor1. You should get an access denied alert, and a DENIED line in `audit.log`.
+- Change a file directly on disk, outside the program, then read it through the program. The integrity check should fail.
+- Enter the wrong password three times for guest1, then try the correct password. The account should stay locked.
